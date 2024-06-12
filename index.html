@@ -3,39 +3,25 @@
 <head>
     <meta charset="UTF-32">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spy Game</title>
+    <title>Drink Tracker</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div id="introScreen">
-        <h1>Spy Game</h1>
-        <p>Zvolte sv√© za≈ô√≠zen√≠:</p>
-        <button onclick="startForPC()">PC</button>
-        <button onclick="startForMobile()">Telefon</button>
+    <div class="container">
+        <header>
+            <h1>Drink Tracker</h1>
+            <nav>
+                <button onclick="showNewEventForm()">Nov· akce</button>
+                <button onclick="showOngoingEvents()">ProbÌhajÌcÌ akce</button>
+                <button onclick="showEndedEvents()">UkonËenÈ akce</button>
+            </nav>
+        </header>
+        <main id="content">
+            <!-- Dynamic content will be loaded here -->
+        </main>
     </div>
-
-    <div id="settingsScreen" style="display:none;">
-        <h1>Spy Game</h1>
-        <label for="playerCount">Poƒçet hr√°ƒç≈Ø:</label>
-        <select id="playerCount">
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-            <option value="7">7</option>
-            <option value="8">8</option>
-            <option value="9">9</option>
-            <option value="10">10</option>
-        </select>
-        <label for="category">Kategorie:</label>
-        <select id="category">
-            <option value="things">Vƒõci</option>
-            <option value="places">M√≠sta</option>
-        </select>
-        <button onclick="startGame()">Start Game</button>
-        <div id="gameBoard"></div>
-        <div id="countdown" class="countdown"></div>
-    </div>
-
-    <script src="script.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>
+
