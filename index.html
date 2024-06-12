@@ -7,25 +7,35 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Spy Game</h1>
-    <label for="playerCount">Počet hráčů:</label>
-    <select id="playerCount">
-        <option value="4">4</option>
-        <option value="5">5</option>
-        <option value="6">6</option>
-        <option value="7">7</option>
-        <option value="8">8</option>
-        <option value="9">9</option>
-        <option value="10">10</option>
-    </select>
-    <label for="category">Kategorie:</label>
-    <select id="category">
-        <option value="things">Věci</option>
-        <option value="places">Místa</option>
-    </select>
-    <button onclick="startGame()">Start Game</button>
-    <div id="gameBoard"></div>
-    <div id="countdown" class="countdown"></div>
+    <div id="introScreen">
+        <h1>Spy Game</h1>
+        <p>Zvolte své zařízení:</p>
+        <button onclick="startForPC()">PC</button>
+        <button onclick="startForMobile()">Telefon</button>
+    </div>
+
+    <div id="settingsScreen" style="display:none;">
+        <h1>Spy Game</h1>
+        <label for="playerCount">Počet hráčů:</label>
+        <select id="playerCount">
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+        </select>
+        <label for="category">Kategorie:</label>
+        <select id="category">
+            <option value="things">Věci</option>
+            <option value="places">Místa</option>
+        </select>
+        <button onclick="startGame()">Start Game</button>
+        <div id="gameBoard"></div>
+        <div id="countdown" class="countdown"></div>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
