@@ -29,6 +29,27 @@ let spyIndex = -1;
 let flippedCardsCount = 0;
 let totalCards = 0;
 let countdownActive = false; // Přidána proměnná pro sledování aktivního odpočtu
+let isMobile = false; // Přidána proměnná pro sledování, zda je zařízení mobilní
+
+function startForPC() {
+    isMobile = false;
+    startSettings();
+}
+
+function startForMobile() {
+    isMobile = true;
+    startSettings();
+}
+
+function startSettings() {
+    document.getElementById("introScreen").style.display = "none";
+    document.getElementById("settingsScreen").style.display = "block";
+    if (isMobile) {
+        document.body.classList.add("mobile");
+    } else {
+        document.body.classList.remove("mobile");
+    }
+}
 
 function startGame() {
     const playerCount = parseInt(document.getElementById("playerCount").value);
@@ -79,17 +100,17 @@ function revealCard(card) {
     // Přidáme odpočet 5 sekund
     let countdown = 5;
     if (flippedCardsCount < totalCards) {
-        countdownDiv.innerHTML = `Predej telefon dalsimu hraci za: ${countdown}`;
+        countdownDiv.innerHTML = `Předej telefon dalšímu hráči za: ${countdown}`;
     } else {
-        countdownDiv.innerHTML = `Hra zacina za: ${countdown}`;
+        countdownDiv.innerHTML = `Hra začíná za: ${countdown}`;
     }
     const countdownInterval = setInterval(() => {
         countdown--;
         if (countdown > 0) {
             if (flippedCardsCount < totalCards) {
-                countdownDiv.innerHTML = `Predej telefon dalsimu hraci za: ${countdown}`;
+                countdownDiv.innerHTML = `Předej telefon dalšímu hráči za: ${countdown}`;
             } else {
-                countdownDiv.innerHTML = `Hra zacina za: ${countdown}`;
+                countdownDiv.innerHTML = `Hra začíná za: ${countdown}`;
             }
         } else {
             clearInterval(countdownInterval);
