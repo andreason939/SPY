@@ -79,17 +79,17 @@ function revealCard(card) {
     // Přidáme odpočet 5 sekund
     let countdown = 5;
     if (flippedCardsCount < totalCards) {
-        countdownDiv.innerHTML = `Předej telefon dalšímu hráči za: ${countdown}`;
+        countdownDiv.innerHTML = `Predej telefon dalsimu hraci za: ${countdown}`;
     } else {
-        countdownDiv.innerHTML = `Hra začíná za: ${countdown}`;
+        countdownDiv.innerHTML = `Hra zacina za: ${countdown}`;
     }
     const countdownInterval = setInterval(() => {
         countdown--;
         if (countdown > 0) {
             if (flippedCardsCount < totalCards) {
-                countdownDiv.innerHTML = `Předej telefon dalšímu hráči za: ${countdown}`;
+                countdownDiv.innerHTML = `Predej telefon dalsimu hraci za: ${countdown}`;
             } else {
-                countdownDiv.innerHTML = `Hra začíná za: ${countdown}`;
+                countdownDiv.innerHTML = `Hra zacina za: ${countdown}`;
             }
         } else {
             clearInterval(countdownInterval);
