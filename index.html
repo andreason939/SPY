@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-32">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spy Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Spy Game</h1>
+    <label for="playerCount">Poèet hráèù:</label>
+    <select id="playerCount">
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+    </select>
+    <label for="category">Kategorie:</label>
+    <select id="category">
+        <option value="things">Vìci</option>
+        <option value="places">Místa</option>
+    </select>
+    <button onclick="startGame()">Start Game</button>
+    <div id="gameBoard"></div>
+    <div id="countdown" class="countdown"></div>
+    <script src="script.js"></script>
+</body>
+</html>
+
