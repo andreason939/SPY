@@ -1,26 +1,26 @@
 const categories = {
     things: [
-        "pes", "koèka", "køeèek", "králík", "papoušek", "rybièka", "elva", "kanárek",
-        "slon", "irafa", "lev", "tygr", "opice", "medvìd", "vlk", "liška", "zebra",
-        "auto", "kolo", "motorka", "vlak", "letadlo", "loï", "tramvaj", "autobus",
-        "kniha", "noviny", "èasopis", "mapa", "sešit", "diáø", "obraz", "fotografie",
-        "notebook", "tablet", "telefon", "klávesnice", "myš", "monitor", "televize", "rádio",
-        "deštník", "kabát", "boty", "trièko", "kalhoty", "suknì", "šaty", "bunda",
-        "fotbal", "basketbal", "tenis", "hokej", "volejbal", "bìh", "plavání", "cyklistika",
-        "doktor", "uèitel", "policista", "hasiè", "kuchaø", "zahradník", "inenır", "architekt",
-        "kladivo", "šroubovák", "klíè", "pila", "vrtaèka", "sekaèka", "lopata", "hrábì",
-        "stùl", "idle", "skøíò", "postel", "gauè", "koberec", "police", "lampa",
-        "letadlová loï", "ponorka", "raketoplán", "helikoptéra", "tanker", "jachta", "balón",
-        "sluchátka", "mikrofon", "reproduktor", "kamera", "projektor", "anténa", "dron", "robot",
-        "lednièka", "praèka", "mikrovlnka", "trouba", "mixér", "vysavaè", "fén", "ehlièka"
+        "pes", "koÄka", "kÅ™eÄek", "krÃ¡lÃ­k", "papouÅ¡ek", "rybiÄka", "Å¾elva", "kanÃ¡rek",
+        "slon", "Å¾irafa", "lev", "tygr", "opice", "medvÄ›d", "vlk", "liÅ¡ka", "zebra",
+        "auto", "kolo", "motorka", "vlak", "letadlo", "loÄ", "tramvaj", "autobus",
+        "kniha", "noviny", "Äasopis", "mapa", "seÅ¡it", "diÃ¡Å™", "obraz", "fotografie",
+        "notebook", "tablet", "telefon", "klÃ¡vesnice", "myÅ¡", "monitor", "televize", "rÃ¡dio",
+        "deÅ¡tnÃ­k", "kabÃ¡t", "boty", "triÄko", "kalhoty", "suknÄ›", "Å¡aty", "bunda",
+        "fotbal", "basketbal", "tenis", "hokej", "volejbal", "bÄ›h", "plavÃ¡nÃ­", "cyklistika",
+        "doktor", "uÄitel", "policista", "hasiÄ", "kuchaÅ™", "zahradnÃ­k", "inÅ¾enÃ½r", "architekt",
+        "kladivo", "Å¡roubovÃ¡k", "klÃ­Ä", "pila", "vrtaÄka", "sekaÄka", "lopata", "hrÃ¡bÄ›",
+        "stÅ¯l", "Å¾idle", "skÅ™Ã­Åˆ", "postel", "gauÄ", "koberec", "police", "lampa",
+        "letadlovÃ¡ loÄ", "ponorka", "raketoplÃ¡n", "helikoptÃ©ra", "tanker", "jachta", "balÃ³n",
+        "sluchÃ¡tka", "mikrofon", "reproduktor", "kamera", "projektor", "antÃ©na", "dron", "robot",
+        "ledniÄka", "praÄka", "mikrovlnka", "trouba", "mixÃ©r", "vysavaÄ", "fÃ©n", "Å¾ehliÄka"
     ],
     places: [
-        "kavárna", "restaurace", "kino", "divadlo", "muzeum", "park", "zoo", "høištì",
-        "plá", "hora", "les", "øeka", "jezero", "mìsto", "vesnice", "stadion",
-        "sauna", "banka", "knihovna", "školka", "škola", "univerzita", "nemocnice", "poliklinika",
-        "obchod", "supermarket", "nádraí", "letištì", "høištì", "bazén", "posilovna", "kostel",
-        "radnice", "pošta", "restaurace", "hotel", "hostel", "penzion", "motel", "kemp",
-        "parkovištì", "gará", "autobusová zastávka", "tramvajová zastávka", "vlakové nádraí", "letištì"
+        "kavÃ¡rna", "restaurace", "kino", "divadlo", "muzeum", "park", "zoo", "hÅ™iÅ¡tÄ›",
+        "plÃ¡Å¾", "hora", "les", "Å™eka", "jezero", "mÄ›sto", "vesnice", "stadion",
+        "sauna", "banka", "knihovna", "Å¡kolka", "Å¡kola", "univerzita", "nemocnice", "poliklinika",
+        "obchod", "supermarket", "nÃ¡draÅ¾Ã­", "letiÅ¡tÄ›", "hÅ™iÅ¡tÄ›", "bazÃ©n", "posilovna", "kostel",
+        "radnice", "poÅ¡ta", "restaurace", "hotel", "hostel", "penzion", "motel", "kemp",
+        "parkoviÅ¡tÄ›", "garÃ¡Å¾", "autobusovÃ¡ zastÃ¡vka", "tramvajovÃ¡ zastÃ¡vka", "vlakovÃ© nÃ¡draÅ¾Ã­", "letiÅ¡tÄ›"
     ]
 };
 
@@ -28,7 +28,7 @@ let selectedWord = "";
 let spyIndex = -1;
 let flippedCardsCount = 0;
 let totalCards = 0;
-let countdownActive = false; // Pøidána promìnná pro sledování aktivního odpoètu
+let countdownActive = false; // PÅ™idÃ¡na promÄ›nnÃ¡ pro sledovÃ¡nÃ­ aktivnÃ­ho odpoÄtu
 
 function startGame() {
     const playerCount = parseInt(document.getElementById("playerCount").value);
@@ -43,8 +43,8 @@ function startGame() {
     
     const gameBoard = document.getElementById("gameBoard");
     const countdownDiv = document.getElementById("countdown");
-    gameBoard.innerHTML = ""; // Vyèistí herní plochu
-    countdownDiv.innerHTML = ""; // Vyèistí odpoèet
+    gameBoard.innerHTML = ""; // VyÄistÃ­ hernÃ­ plochu
+    countdownDiv.innerHTML = ""; // VyÄistÃ­ odpoÄet
 
     for (let i = 0; i < playerCount; i++) {
         const cardContainer = document.createElement("div");
@@ -53,7 +53,7 @@ function startGame() {
         const card = document.createElement("div");
         card.className = "card";
         card.innerHTML = `<div class="back">Klikni</div>`;
-        card.dataset.index = i; // Uloí index karty do data atributu
+        card.dataset.index = i; // UloÅ¾Ã­ index karty do data atributu
         card.onclick = () => revealCard(card);
 
         cardContainer.appendChild(card);
@@ -62,42 +62,42 @@ function startGame() {
 }
 
 function revealCard(card) {
-    if (countdownActive) return; // Zabrání otoèení dalších karet bìhem odpoètu
+    if (countdownActive) return; // ZabrÃ¡nÃ­ otoÄenÃ­ dalÅ¡Ã­ch karet bÄ›hem odpoÄtu
 
     const index = parseInt(card.dataset.index);
-    const countdownDiv = document.getElementById("countdown"); // Najdeme div pro odpoèet
+    const countdownDiv = document.getElementById("countdown"); // Najdeme div pro odpoÄet
     if (index === spyIndex) {
         card.innerHTML = "SPY";
     } else {
         card.innerHTML = selectedWord;
     }
-    card.onclick = null; // Zabraòuje opakovanému kliknutí
+    card.onclick = null; // ZabraÅˆuje opakovanÃ©mu kliknutÃ­
 
-    countdownActive = true; // Nastaví odpoèet jako aktivní
+    countdownActive = true; // NastavÃ­ odpoÄet jako aktivnÃ­
     flippedCardsCount++;
     
-    // Pøidáme odpoèet 5 sekund
+    // PÅ™idÃ¡me odpoÄet 5 sekund
     let countdown = 5;
     if (flippedCardsCount < totalCards) {
-        countdownDiv.innerHTML = `Pøedej telefon dalšímu hráèi za: ${countdown}`;
+        countdownDiv.innerHTML = `PÅ™edej telefon dalÅ¡Ã­mu hrÃ¡Äi za: ${countdown}`;
     } else {
-        countdownDiv.innerHTML = `Hra zaèíná za: ${countdown}`;
+        countdownDiv.innerHTML = `Hra zaÄÃ­nÃ¡ za: ${countdown}`;
     }
     const countdownInterval = setInterval(() => {
         countdown--;
         if (countdown > 0) {
             if (flippedCardsCount < totalCards) {
-                countdownDiv.innerHTML = `Pøedej telefon dalšímu hráèi za: ${countdown}`;
+                countdownDiv.innerHTML = `PÅ™edej telefon dalÅ¡Ã­mu hrÃ¡Äi za: ${countdown}`;
             } else {
-                countdownDiv.innerHTML = `Hra zaèíná za: ${countdown}`;
+                countdownDiv.innerHTML = `Hra zaÄÃ­nÃ¡ za: ${countdown}`;
             }
         } else {
             clearInterval(countdownInterval);
             countdownDiv.innerHTML = "";
             card.classList.add('revealed');
             card.innerHTML = "";
-            card.onclick = null; // Zabrání dalšímu kliknutí
-            countdownActive = false; // Uvolní odpoèet, povolí otoèení dalších karet
+            card.onclick = null; // ZabrÃ¡nÃ­ dalÅ¡Ã­mu kliknutÃ­
+            countdownActive = false; // UvolnÃ­ odpoÄet, povolÃ­ otoÄenÃ­ dalÅ¡Ã­ch karet
             
             if (flippedCardsCount === totalCards) {
                 startFinalCountdown(totalCards);
@@ -113,7 +113,7 @@ function startFinalCountdown(playerCount) {
     // Skryjeme karty
     gameBoard.innerHTML = "";
     
-    let finalCountdown = playerCount * 60; // 1 minuta za kadého hráèe
+    let finalCountdown = playerCount * 60; // 1 minuta za kaÅ¾dÃ©ho hrÃ¡Äe
     const finalCountdownInterval = setInterval(() => {
         const minutes = Math.floor(finalCountdown / 60);
         const seconds = finalCountdown % 60;
@@ -125,4 +125,3 @@ function startFinalCountdown(playerCount) {
         }
     }, 1000);
 }
-
