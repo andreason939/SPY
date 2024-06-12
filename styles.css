@@ -46,17 +46,20 @@ button:hover {
 }
 
 .card {
-    width: 150px; /* zv�t�eno */
-    height: 200px; /* zv�t�eno */
+    width: 150px; /* výchozí velikost pro PC */
+    height: 200px; /* výchozí velikost pro PC */
     background-color: #1a1a1a;
     border: 2px solid #0ff;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.5em; /* zmen�eno */
+    font-size: 1.5em; /* zmenšeno */
     cursor: pointer;
     position: relative;
     transition: transform 0.3s;
+    overflow: hidden; /* Přidáno pro přizpůsobení textu */
+    white-space: nowrap; /* Přidáno pro přizpůsobení textu */
+    text-overflow: ellipsis; /* Přidáno pro přizpůsobení textu */
 }
 
 .card:hover {
@@ -72,7 +75,10 @@ button:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.5em; /* zmen�eno */
+    font-size: 1.5em; /* zmenšeno */
+    overflow: hidden; /* Přidáno pro přizpůsobení textu */
+    white-space: nowrap; /* Přidáno pro přizpůsobení textu */
+    text-overflow: ellipsis; /* Přidáno pro přizpůsobení textu */
 }
 
 .card.revealed {
@@ -84,6 +90,10 @@ button:hover {
     font-size: 2em;
     margin-top: 20px;
     color: #0ff;
-    
 }
 
+.mobile .card {
+    width: 100px; /* menší velikost pro mobil */
+    height: 150px; /* menší velikost pro mobil */
+    font-size: 1.2em; /* menší font pro mobil */
+}
